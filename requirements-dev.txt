@@ -1,0 +1,5 @@
+# Testler ve sahte yedek üretimi için (pencere kütüphanesi gerekmez)
+pillow>=10
+iphone_backup_decrypt>=0.9
+# sahte yedekte video ve sesli mesaj üretmek için (yoksa video testleri atlanır)
+imageio-ffmpeg>=0.5

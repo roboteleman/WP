@@ -1,0 +1,3 @@
+# Programı kaynak koddan çalıştırmak için (python main.py)
+pywebview>=5.3
+iphone_backup_decrypt>=0.9

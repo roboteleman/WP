@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Derleme çıktıları
+build/
+dist/
+*.spec
+
+# Kişisel veriler — asla depoya eklenmemeli
+Arsiv_Verisi/
+program.log
+
+# Sistem
+.DS_Store
+Thumbs.db
+desktop.ini
