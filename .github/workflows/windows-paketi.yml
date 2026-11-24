@@ -43,6 +43,7 @@ jobs:
         shell: pwsh
         env:
           FAKE_BUYUK: "0"
+          PYTHONUTF8: "1"
         run: |
           python -m pip install pillow
           Expand-Archive dist/WhatsApp-Arsivi-Windows.zip -DestinationPath paket

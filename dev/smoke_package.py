@@ -8,6 +8,22 @@ aktarılabiliyor mu; medyalar sabit bağlantıyla alınabiliyor mu.
 import os
 import sys
 import time
+import traceback
+
+# Actions'ta çıktı bir borudur; Windows'ta cp1252 "ğ"/"ı" yazamaz.
+for _s in (sys.stdout, sys.stderr):
+    _s.reconfigure(encoding="utf-8", errors="backslashreplace")
+
+
+def _report(exc_type, exc, tb):
+    """Hatayı GitHub'da bir 'annotation' olarak da göster (oturum açmadan görülebilir)."""
+    text = "".join(traceback.format_exception(exc_type, exc, tb))
+    sys.stderr.write(text)
+    msg = text.strip().replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+    print(f"::error title=Paket denemesi başarısız::{msg}", flush=True)
+
+
+sys.excepthook = _report
 
 pkg, backup = sys.argv[1], sys.argv[2]
 sys.path.insert(0, os.path.join(pkg, "app"))

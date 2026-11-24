@@ -387,6 +387,8 @@ def build_fake_backup(out_root, big=True, seed=42):
 
 
 def main():
+    for s in (sys.stdout, sys.stderr):  # Windows'ta yönlendirilmiş çıktı cp1252'dir
+        s.reconfigure(encoding="utf-8", errors="backslashreplace")
     big = os.environ.get("FAKE_BUYUK", "1") == "1"
     path = build_fake_backup(sys.argv[1], big=big)
     print(f"Sahte yedek: {path}")

@@ -17,6 +17,13 @@ APP_TITLE = "WhatsApp Arşivi"
 
 def _fix_std_streams(data_root):
     """Konsolsuz çalışmada stdout/stderr yoktur; hataları bir günlük dosyasına yaz."""
+    # Çıktı bir dosyaya/boruya yönlendirildiğinde Windows cp1252 kullanır ve "ğ", "ı" ya da dosya
+    # adlarındaki emojiler UnicodeEncodeError verir (içe aktarmayı bile durdurabilir). UTF-8'e çevir.
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="backslashreplace")
+        except (AttributeError, ValueError, OSError):
+            pass
     if sys.stdout is not None and sys.stderr is not None:
         return None
     log_path = os.path.join(data_root, "program.log")
