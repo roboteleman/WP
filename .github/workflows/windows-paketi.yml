@@ -63,3 +63,9 @@ jobs:
         with:
           files: dist/WhatsApp-Arsivi-Windows.zip
           generate_release_notes: true
+          body: |
+            **İndirme:** Aşağıdaki `WhatsApp-Arsivi-Windows.zip` dosyasını indirin, sağ tıklayıp **Tümünü ayıkla** deyin
+            ve `WhatsApp Arsivi.exe`'yi açın. Kurulum gerekmez. iPhone yedeğinin nasıl alınacağı [README](${{ github.server_url }}/${{ github.repository }}#readme)'de.
+
+            **Download:** Get `WhatsApp-Arsivi-Windows.zip` below, right-click it, choose **Extract All** and open
+            `WhatsApp Arsivi.exe`. No installation needed. How to make the iPhone backup: [README (English)](${{ github.server_url }}/${{ github.repository }}/blob/main/README.en.md).

@@ -1,5 +1,7 @@
 # WhatsApp Arşivi
 
+**Türkçe** | [English](README.en.md)
+
 iPhone'un bilgisayardaki yedeğinden **tüm WhatsApp sohbetlerinizi** (fotoğraf, video, sesli mesaj ve belgeler dahil)
 tek seferde içe aktaran ve WhatsApp'a benzeyen bir pencerede gösteren, **salt okunur** bir Windows programı.
 Mesaj gönderemez, internete bağlanmaz; her şey yalnızca sizin bilgisayarınızda kalır.
@@ -99,8 +101,8 @@ GitHub'da `v1.2.0` gibi bir etiket gönderildiğinde **Windows paketi** iş akı
 makinesinde sahte yedekle dener ve Releases sayfasına yükler:
 
 ```bash
-git tag v1.1.0
-git push origin v1.1.0
+git tag v1.2.0
+git push origin v1.2.0
 ```
 
 Alternatif olarak Windows'ta PyInstaller ile tek dosyalık .exe üretmek için `build.bat` kullanılabilir.
@@ -119,13 +121,7 @@ Alternatif olarak Windows'ta PyInstaller ile tek dosyalık .exe üretmek için `
 
 Katkılar memnuniyetle karşılanır: hata bildirimi için bir *issue* açın ya da *pull request* gönderin.
 Lütfen hata bildirirken gerçek mesaj içeriği veya kişisel bilgi paylaşmayın.
-
-## English
-
-**WhatsApp Arşivi** is a read-only Windows viewer for WhatsApp chats stored in a local iPhone (iTunes / Apple Devices)
-backup. It imports all chats at once (including photos, videos, voice notes and documents), shows them in a
-WhatsApp-like window with per-chat media/docs/links tabs and full-text search, and never connects to the internet.
-Download the portable zip from [Releases](../../releases/latest); no installation needed. The UI is in Turkish.
+Issue ve pull request'ler Türkçe ya da İngilizce yazılabilir.
 
 ## Lisans ve uyarı
 
